@@ -1,2 +1,2 @@
-/* eslint-disable import/prefer-default-export */
-export { default as GunshotUiSample } from './gunshot-ui-sample.vue';
+export { default as GuiAdminLayout } from './layouts/admin/GUI-AdminLayout.vue';
+export { default as GuiSidebar } from './components/admin/GUI-Sidebar.vue';
