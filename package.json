@@ -1,0 +1,16 @@
+{
+  "name": "gunshot-ui",
+  "version": "0.0.1",
+  "description": "Gunshot UI packages",
+  "devDependencies": {
+    "vue": "^3.2.32"
+  },
+  "scripts": {
+    "serve": "vue serve --open",
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file",
+    "build:es": "rollup --config build/rollup.config.js --format es --file ",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file ",
+    "prepublish": "npm run build"
+},
+}
