@@ -2,7 +2,7 @@
     <section>
         <div class="layout-wrapper layout-2">
             <div class="layout-inner">
-                <sidenav />
+                <sidenav :logo="logo" />
 
                 <div class="layout-container">
                     <navbar/>
@@ -39,6 +39,20 @@ export default {
         'navbar': Navbar,
         'sidenav': Sidenav,
     },
+    props: {
+        'logo': {
+            type: String,
+            default: '',
+        },
+        'routes': {
+            type: Array,
+            default: () => [],
+        },
+        'user': {
+            type: Object,
+            default: () => {},
+        },
+    }
 }
 </script>
 <style>

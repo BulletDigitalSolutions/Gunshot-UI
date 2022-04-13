@@ -2,7 +2,7 @@
     <div id="layout-sidenav" class="layout-sidenav sidenav sidenav-vertical bg-sidenav-theme">
         <div class="app-brand demo mt-md-3">
             <a href="" class="app-brand-text demo sidenav-text font-weight-normal m-auto">
-                <img src="/assets/shoot-logo-primary-green.svg" alt="Logo" class="w-auto">
+                <img :src="logo" alt="Logo" class="w-auto">
             </a>
         </div>
 
@@ -15,4 +15,18 @@
         </ul>
     </div>
 </template>
+<script>
+export default {
+    props: {
+        logo: {
+            type: String,
+            default: '/assets/shoot-logo-primary-green.svg'
+        },
+        routes: {
+            type: Array,
+            default: () => []
+        }
+    }
+}
+</script>
 
