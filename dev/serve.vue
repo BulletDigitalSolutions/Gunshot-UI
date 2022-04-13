@@ -5,7 +5,7 @@
         <gui-sidebar>
             <li class="sidenav-item pt-2 m-3">
                 <div class="form-group">
-                    <label class="form-label" for="search" v-model="table.filters.search">Search</label>
+                    <label class="form-label" for="search" v-model="filters.search">Search</label>
                     <input type="text" class="form-control" placeholder="Search" id="search">
                 </div>
 
@@ -16,7 +16,7 @@
         </gui-sidebar>
       </template>
 
-      <gui-datatable v-model="table" />
+      <gui-datatable v-model="table" :results="{ 'count': 0, 'data': [] }" />
     </gui-admin-layout>
   </div>
 </template>
@@ -27,26 +27,17 @@ export default Vue.extend({
     name: 'ServeDev',
     data() {
         return {
+            filters: {
+                'search': '',
+            },
             table: {
-                page: 1,
-                perPage: 10,
-                sortBy: 'id',
-                sortDirection: 'asc',
-                filters: {
-                    search: ''
+                sort: {
+                    sortBy: 'id',
+                    sortDirection: 'asc',
                 },
-                results: {
-                    count: 2,
-                    data: [
-                        {
-                            id: 1,
-                            name: 'John Doe'
-                        },
-                        {
-                            id: 2,
-                            name: 'Jane Doe'
-                        },
-                    ]
+                pagination: {
+                    page: 1,
+                    limit: 25,
                 },
                 options: {
                     fields: [
@@ -59,9 +50,9 @@ export default Vue.extend({
                             key: 'name',
                             label: 'Name',
                             sortable: true,
-                        }
+                        },
                     ],
-                }
+                },
             },
         };
     },

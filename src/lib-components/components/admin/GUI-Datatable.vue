@@ -13,10 +13,10 @@
                     class="pt-2 pr-4"
                 ></b-pagination>
             </b-card-header>
-            <b-table striped :items="results.data" :fields="table.options.fields" class="p-0">
-                <slot name="table"></slot>
+            <b-table striped :items="results.data" :fields="table.options.fields" no-local-sorting @sort-changed="sort" :busy="table.isLoading">
+                <template v-for="(_, name) in $scopedSlots" :slot="name" slot-scope="slotData"><slot :name="name" v-bind="slotData" /></template>
             </b-table>
-            <b-card-footer>
+            <b-card-footer class="pt-0">
                 <p class="text-muted pull-left">Showing {{ results.data.length }} of {{ results.count }} results</p>
 
                 <b-pagination
@@ -35,9 +35,10 @@ export default {
         value: {
             type: Object,
             default: {
+                isLoading: false,
                 sort: {
-                    sortBy: 'id',
-                    sortDirection: 'asc',
+                    field: 'id',
+                    direction: 'asc',
                 },
                 pagination: {
                     page: 1,
@@ -75,6 +76,19 @@ export default {
         return {
             table: this.value
         }
+    },
+    methods: {
+        sort (e) {
+            this.table.sort.field = e.sortBy
+
+            if (e.sortDesc) {
+                this.table.sort.direction = 'desc'
+            } else {
+                this.table.sort.direction = 'asc'
+            }
+
+            this.table.pagination.page = 1;
+        },
     },
     watch: {
         value(newValue) {
