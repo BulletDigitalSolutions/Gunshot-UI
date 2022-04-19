@@ -6,12 +6,8 @@
             </a>
         </div>
 
-        <ul class="sidenav-inner py-1">
-            <!--    @can('index', \App\Entities\Plant::class)-->
-            <!--    <li class="sidenav-item{{ Str::startsWith($currentRoute, 'admin.plants') ? ' active' : '' }}">-->
-            <!--        <a href="{{ route('admin.plants.index') }}" class="sidenav-link"><i class="sidenav-icon ion ion-ios-document"></i><div>{{ __('Plants') }}</div></a>-->
-            <!--    </li>-->
-            <!--    @endcan-->
+        <ul class="sidenav-inner py-1 pt-5 w-100">
+            <slot />
         </ul>
     </div>
 </template>

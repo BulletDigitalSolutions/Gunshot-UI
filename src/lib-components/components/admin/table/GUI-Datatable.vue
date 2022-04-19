@@ -1,33 +1,42 @@
 <template>
-    <div>
-        <b-form-select v-model="table.pagination.limit" :options="perPageOptions"></b-form-select>
-
-        <b-card body-class="p-0">
-            <b-card-header>
+    <b-card body-class="p-0">
+        <b-card-header>
+            <div class="d-flex">
+                <b-form-select class="w-25 pull-right" v-model="table.pagination.limit" :options="perPageOptions"></b-form-select>
+            </div>
+            <div class="d-flex justify-content-between">
                 <p class="text-muted">Showing {{ results.data.length }} of {{ results.count }} results</p>
-
-                <b-pagination
-                    v-model="table.pagination.page"
-                    :total-rows="results.count"
-                    :per-page="table.pagination.limit"
-                    class="pt-2 pr-4"
-                ></b-pagination>
-            </b-card-header>
-            <b-table striped :items="results.data" :fields="table.options.fields" no-local-sorting @sort-changed="sort" :busy="table.isLoading">
-                <template v-for="(_, name) in $scopedSlots" :slot="name" slot-scope="slotData"><slot :name="name" v-bind="slotData" /></template>
-            </b-table>
-            <b-card-footer class="pt-0">
-                <p class="text-muted pull-left">Showing {{ results.data.length }} of {{ results.count }} results</p>
-
                 <b-pagination
                     v-model="table.pagination.page"
                     :total-rows="results.count"
                     :per-page="table.pagination.limit"
                     class="pull-right pt-2 pr-4"
                 ></b-pagination>
-            </b-card-footer>
-        </b-card>
-    </div>
+            </div>
+        </b-card-header>
+        <b-table striped :items="results.data" :fields="table.options.fields" no-local-sorting @sort-changed="sort" :busy="table.isLoading" class="mb-0">
+            <template #table-colgroup="scope">
+                <col
+                    v-for="field in scope.fields"
+                    :key="field.key"
+                    :class="field.class"
+                >
+            </template>
+
+            <template v-for="(_, name) in $scopedSlots" :slot="name" slot-scope="slotData"><slot :name="name" v-bind="slotData" /></template>
+        </b-table>
+        <b-card-footer class="pt-0">
+            <div class="d-flex justify-content-between mb-2 py-2">
+                <p class="text-muted">Showing {{ results.data.length }} of {{ results.count }} results</p>
+                <b-pagination
+                    v-model="table.pagination.page"
+                    :total-rows="results.count"
+                    :per-page="table.pagination.limit"
+                    class="pull-right pt-2 pr-4"
+                ></b-pagination>
+            </div>
+        </b-card-footer>
+    </b-card>
 </template>
 <script>
 export default {
@@ -47,14 +56,16 @@ export default {
                 options: {
                     fields: [
                         {
-                          key: 'id',
-                          label: 'ID',
-                          sortable: true,
+                            key: 'id',
+                            label: 'ID',
+                            sortable: true,
+                            class: 'col-2',
                         },
                         {
-                          key: 'name',
-                          label: 'Name',
-                          sortable: true,
+                            key: 'name',
+                            label: 'Name',
+                            sortable: true,
+                            class: 'col-8',
                         },
                     ],
                 },

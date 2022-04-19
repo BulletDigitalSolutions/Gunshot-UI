@@ -1,9 +1,14 @@
+// Layouts
 export { default as GuiAdminLayout } from './layouts/admin/GUI-AdminLayout.vue';
 
-export { default as GuiSidebar } from './components/admin/GUI-Sidebar.vue';
-export { default as GuiSidebarItem } from './components/admin/GUI-SidebarItem.vue';
+// Layout Components
+export { default as GuiSidebar } from './components/admin/layout/GUI-Sidebar.vue';
+export { default as GuiSidebarItem } from './components/admin/layout/GUI-SidebarItem.vue';
+export { default as GuiPageTitle } from './components/admin/layout/GUI-PageTitle.vue';
 
-export { default as GuiPageTitle } from './components/admin/pages/GUI-PageTitle.vue';
-
-export { default as GuiDatatable } from './components/admin/GUI-Datatable.vue';
+// Table components
+export { default as GuiDatatable } from './components/admin/table/GUI-Datatable.vue';
 export { default as GuiActionColumn } from './components/admin/table/column/GUI-ActionColumn.vue';
+
+// Form components
+export { default as GuiSelectSearch } from './components/admin/forms/GUI-SelectSearch.vue';

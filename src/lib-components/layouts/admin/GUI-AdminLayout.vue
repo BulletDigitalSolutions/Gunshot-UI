@@ -2,10 +2,13 @@
     <section>
         <div class="layout-wrapper layout-2">
             <div class="layout-inner">
-                <sidenav :logo="logo" />
+
+                <sidenav :logo="logo">
+                    <slot name="sidenav" />
+                </sidenav>
 
                 <div class="layout-container">
-                    <navbar/>
+                    <navbar :breadcrumbs="breadcrumbs" />
 
                     <div class="layout-content">
                         <div class="container-fluid d-flex align-items-stretch flex-grow-1 p-0">
@@ -51,6 +54,10 @@ export default {
         'user': {
             type: Object,
             default: () => {},
+        },
+        'breadcrumbs': {
+            type: Array,
+            default: () => [],
         },
     }
 }

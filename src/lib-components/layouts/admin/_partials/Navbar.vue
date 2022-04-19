@@ -14,6 +14,11 @@
             <hr class="d-lg-none w-100 my-2">
 
             <div class="navbar-nav mr-auto">
+                <ol class="breadcrumb m-auto">
+                    <li v-for="(breadcrumb, key) in breadcrumbs" :key="key" :class="['breadcrumb-item', { 'active' : key + 1 === breadcrumbs.length }]">
+                        <a :href="breadcrumb.url">{{ breadcrumb.title }}</a>
+                    </li>
+                </ol>
             </div>
 
             <div class="navbar-nav align-items-lg-center ml-auto">
@@ -32,3 +37,13 @@
     </nav>
 
 </template>
+<script>
+export default {
+    props: {
+        'breadcrumbs': {
+            type: Array,
+            default: () => []
+        },
+    },
+}
+</script>
