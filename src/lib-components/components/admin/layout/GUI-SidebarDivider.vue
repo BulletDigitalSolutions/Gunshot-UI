@@ -1,5 +1,3 @@
 <template>
-    <li class="sidenav-header small font-weight-semibold">
-        <slot />
-    </li>
+    <li class="sidenav-divider mb-1"></li>
 </template>
