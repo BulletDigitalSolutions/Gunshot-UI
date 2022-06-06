@@ -4,6 +4,7 @@
     </span>
 </template>
 <script>
+// A component to search an entity. Performs an infinite scroll from the API, and allows you to filter options.
 export default {
     props: [
         'format',

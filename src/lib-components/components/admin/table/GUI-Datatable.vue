@@ -15,6 +15,7 @@
             </div>
         </b-card-header>
         <b-table striped :items="results.data" :fields="table.options.fields" no-local-sorting @sort-changed="sort" :busy="table.isLoading" class="mb-0">
+<!--         Allows you to override a specific field -->
             <template #table-colgroup="scope">
                 <col
                     v-for="field in scope.fields"
@@ -41,18 +42,23 @@
 <script>
 export default {
     props: {
+        // An Object which contains the table options
         value: {
             type: Object,
             default: {
+                // Loading State
                 isLoading: false,
+                // Sort State
                 sort: {
                     field: 'id',
                     direction: 'asc',
                 },
+                // Pagination State
                 pagination: {
                     page: 1,
                     limit: 25,
                 },
+                // Table Options
                 options: {
                     fields: [
                         {
@@ -71,6 +77,7 @@ export default {
                 },
             }
         },
+        // An Array of Objects which contains the table data
         results: {
             type: Object,
             default: {
@@ -78,6 +85,7 @@ export default {
                 count: 0,
             }
         },
+        // An array of numbers which will be used to populate the limit dropdown
         perPageOptions: {
             type: Array,
             default: () => [10, 25, 50, 100],
