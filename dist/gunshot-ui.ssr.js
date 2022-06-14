@@ -409,10 +409,17 @@ var script$4 = {
 
   data() {
     return {
-      open: false
+      isOpen: false
     };
-  }
+  },
 
+  methods: {
+    toggleSidebar() {
+      this.isOpen = !this.isOpen;
+      this.$emit('toggle-sidebar');
+    }
+
+  }
 };/* script */
 const __vue_script__$4 = script$4;
 /* template */
@@ -425,8 +432,8 @@ var __vue_render__$6 = function () {
   var _c = _vm._self._c || _h;
 
   return _c('li', {
-    class: ['sidenav-item', {
-      open: 'open'
+    class: ['sidenav-item', 'w-100', {
+      'open': _vm.isOpen
     }]
   }, [_vm._ssrNode("<a href=\"javascript:void(0)\" class=\"sidenav-link sidenav-toggle\">" + (_vm.icon ? "<i" + _vm._ssrClass(null, ['sidenav-icon', 'ion', _vm.icon]) + "></i>" : "<!---->") + " <div>" + _vm._ssrEscape(_vm._s(_vm.title)) + "</div></a> "), _vm._ssrNode("<ul class=\"sidenav-menu\">", "</ul>", [_vm._t("default")], 2)], 2);
 };
@@ -440,7 +447,7 @@ const __vue_inject_styles__$6 = undefined;
 const __vue_scope_id__$6 = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$6 = "data-v-538ebd22";
+const __vue_module_identifier__$6 = "data-v-6efd5d07";
 /* functional template */
 
 const __vue_is_functional_template__$6 = false;

@@ -1,6 +1,6 @@
 <template>
-    <li :class="['sidenav-item', { open: 'open'}]">
-        <a href="javascript:void(0)" class="sidenav-link sidenav-toggle" @click="open = !open">
+    <li :class="['sidenav-item', 'w-100', { 'open': isOpen}]" >
+        <a href="javascript:void(0)" class="sidenav-link sidenav-toggle" @click="toggleSidebar" >
             <i v-if="icon" :class="['sidenav-icon', 'ion', icon]"></i>
           <div>{{ title }}</div>
         </a>
@@ -25,8 +25,15 @@ export default {
 
     data () {
         return {
-            open: false,
+            isOpen: false,
         }
+    },
+
+    methods: {
+        toggleSidebar () {
+            this.isOpen = !this.isOpen;
+            this.$emit('toggle-sidebar')
+        },
     }
 }
 </script>

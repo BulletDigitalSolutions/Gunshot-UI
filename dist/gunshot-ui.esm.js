@@ -554,10 +554,17 @@ var script$4 = {
 
   data() {
     return {
-      open: false
+      isOpen: false
     };
-  }
+  },
 
+  methods: {
+    toggleSidebar() {
+      this.isOpen = !this.isOpen;
+      this.$emit('toggle-sidebar');
+    }
+
+  }
 };
 
 /* script */
@@ -572,8 +579,8 @@ var __vue_render__$6 = function () {
   var _c = _vm._self._c || _h;
 
   return _c('li', {
-    class: ['sidenav-item', {
-      open: 'open'
+    class: ['sidenav-item', 'w-100', {
+      'open': _vm.isOpen
     }]
   }, [_c('a', {
     staticClass: "sidenav-link sidenav-toggle",
@@ -581,9 +588,7 @@ var __vue_render__$6 = function () {
       "href": "javascript:void(0)"
     },
     on: {
-      "click": function ($event) {
-        _vm.open = !_vm.open;
-      }
+      "click": _vm.toggleSidebar
     }
   }, [_vm.icon ? _c('i', {
     class: ['sidenav-icon', 'ion', _vm.icon]
