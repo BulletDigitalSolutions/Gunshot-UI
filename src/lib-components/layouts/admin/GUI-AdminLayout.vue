@@ -43,6 +43,7 @@ export default {
         'sidenav': Sidenav,
     },
     props: {
+        // String with a path to the Logo used in the top left
         'logo': {
             type: String,
             default: '',

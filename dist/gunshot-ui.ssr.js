@@ -37,7 +37,7 @@
 //
 //
 //
-var script$6 = {
+var script$7 = {
   props: {
     'breadcrumbs': {
       type: Array,
@@ -118,10 +118,10 @@ var script$6 = {
     }
     return script;
 }/* script */
-const __vue_script__$6 = script$6;
+const __vue_script__$7 = script$7;
 /* template */
 
-var __vue_render__$a = function () {
+var __vue_render__$b = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -140,31 +140,31 @@ var __vue_render__$a = function () {
   }) + "</ol></div> <div class=\"navbar-nav align-items-lg-center ml-auto\"><div class=\"nav-item dropdown\"><a href=\"#\" data-bs-toggle=\"dropdown\" class=\"nav-link dropdown-toggle\"><span class=\"d-inline-flex flex-lg-row-reverse align-items-center align-middle\"><img src alt class=\"d-block ui-w-30 rounded-circle\"> <span class=\"px-1 mr-lg-2 ml-2 ml-lg-0\"></span></span></a> <div class=\"dropdown-menu dropdown-menu-right\"></div></div></div></div>")]);
 };
 
-var __vue_staticRenderFns__$a = [];
+var __vue_staticRenderFns__$b = [];
 /* style */
 
-const __vue_inject_styles__$a = undefined;
+const __vue_inject_styles__$b = undefined;
 /* scoped */
 
-const __vue_scope_id__$a = undefined;
+const __vue_scope_id__$b = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$a = "data-v-56410c2e";
+const __vue_module_identifier__$b = "data-v-56410c2e";
 /* functional template */
 
-const __vue_is_functional_template__$a = false;
+const __vue_is_functional_template__$b = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$j = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$a,
-  staticRenderFns: __vue_staticRenderFns__$a
-}, __vue_inject_styles__$a, __vue_script__$6, __vue_scope_id__$a, __vue_is_functional_template__$a, __vue_module_identifier__$a, false, undefined, undefined, undefined);
+const __vue_component__$l = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$b,
+  staticRenderFns: __vue_staticRenderFns__$b
+}, __vue_inject_styles__$b, __vue_script__$7, __vue_scope_id__$b, __vue_is_functional_template__$b, __vue_module_identifier__$b, false, undefined, undefined, undefined);
 
-var Navbar = __vue_component__$j;//
+var Navbar = __vue_component__$l;//
 //
 //
 //
@@ -177,7 +177,7 @@ var Navbar = __vue_component__$j;//
 //
 //
 //
-var script$5 = {
+var script$6 = {
   props: {
     logo: {
       type: String,
@@ -189,10 +189,10 @@ var script$5 = {
     }
   }
 };/* script */
-const __vue_script__$5 = script$5;
+const __vue_script__$6 = script$6;
 /* template */
 
-var __vue_render__$9 = function () {
+var __vue_render__$a = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -207,37 +207,38 @@ var __vue_render__$9 = function () {
   }, [_vm._ssrNode("<div class=\"app-brand demo mt-md-3\"><a href class=\"app-brand-text demo sidenav-text font-weight-normal m-auto\"><img" + _vm._ssrAttr("src", _vm.logo) + " alt=\"Logo\" class=\"w-auto\"></a></div> "), _vm._ssrNode("<ul class=\"sidenav-inner py-1 pt-5 w-100\">", "</ul>", [_vm._t("default")], 2)], 2);
 };
 
-var __vue_staticRenderFns__$9 = [];
+var __vue_staticRenderFns__$a = [];
 /* style */
 
-const __vue_inject_styles__$9 = undefined;
+const __vue_inject_styles__$a = undefined;
 /* scoped */
 
-const __vue_scope_id__$9 = undefined;
+const __vue_scope_id__$a = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$9 = "data-v-5532405c";
+const __vue_module_identifier__$a = "data-v-5532405c";
 /* functional template */
 
-const __vue_is_functional_template__$9 = false;
+const __vue_is_functional_template__$a = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$i = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$9,
-  staticRenderFns: __vue_staticRenderFns__$9
-}, __vue_inject_styles__$9, __vue_script__$5, __vue_scope_id__$9, __vue_is_functional_template__$9, __vue_module_identifier__$9, false, undefined, undefined, undefined);
+const __vue_component__$k = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$a,
+  staticRenderFns: __vue_staticRenderFns__$a
+}, __vue_inject_styles__$a, __vue_script__$6, __vue_scope_id__$a, __vue_is_functional_template__$a, __vue_module_identifier__$a, false, undefined, undefined, undefined);
 
-var Sidenav = __vue_component__$i;//
-var script$4 = {
+var Sidenav = __vue_component__$k;//
+var script$5 = {
   components: {
     'navbar': Navbar,
     'sidenav': Sidenav
   },
   props: {
+    // String with a path to the Logo used in the top left
     'logo': {
       type: String,
       default: ''
@@ -256,10 +257,10 @@ var script$4 = {
     }
   }
 };/* script */
-const __vue_script__$4 = script$4;
+const __vue_script__$5 = script$5;
 /* template */
 
-var __vue_render__$8 = function () {
+var __vue_render__$9 = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -277,34 +278,34 @@ var __vue_render__$8 = function () {
   }), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"layout-content\">", "</div>", [_vm._ssrNode("<div class=\"container-fluid d-flex align-items-stretch flex-grow-1 p-0\">", "</div>", [_vm._t("sidebar"), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"flex-shrink-1 flex-grow-1 container-p-x container-p-y\">", "</div>", [_vm._t("default")], 2)], 2), _vm._ssrNode(" <nav class=\"layout-footer footer bg-footer-theme\"><div class=\"container-fluid d-flex flex-wrap justify-content-between text-center container-p-x pb-3\"><div class=\"pt-3\"><span class=\"footer-text font-weight-bolder\"></span> ©\n                            </div></div></nav>")], 2)], 2)], 2)])]);
 };
 
-var __vue_staticRenderFns__$8 = [];
+var __vue_staticRenderFns__$9 = [];
 /* style */
 
-const __vue_inject_styles__$8 = undefined;
+const __vue_inject_styles__$9 = undefined;
 /* scoped */
 
-const __vue_scope_id__$8 = undefined;
+const __vue_scope_id__$9 = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$8 = "data-v-28103e1f";
+const __vue_module_identifier__$9 = "data-v-15a022da";
 /* functional template */
 
-const __vue_is_functional_template__$8 = false;
+const __vue_is_functional_template__$9 = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$g = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$8,
-  staticRenderFns: __vue_staticRenderFns__$8
-}, __vue_inject_styles__$8, __vue_script__$4, __vue_scope_id__$8, __vue_is_functional_template__$8, __vue_module_identifier__$8, false, undefined, undefined, undefined);
+const __vue_component__$i = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$9,
+  staticRenderFns: __vue_staticRenderFns__$9
+}, __vue_inject_styles__$9, __vue_script__$5, __vue_scope_id__$9, __vue_is_functional_template__$9, __vue_module_identifier__$9, false, undefined, undefined, undefined);
 
-var __vue_component__$h = __vue_component__$g;/* script */
+var __vue_component__$j = __vue_component__$i;/* script */
 
 /* template */
-var __vue_render__$7 = function () {
+var __vue_render__$8 = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -319,6 +320,45 @@ var __vue_render__$7 = function () {
   }, [_vm._ssrNode("<ul class=\"sidenav-inner\">", "</ul>", [_vm._t("default")], 2)]);
 };
 
+var __vue_staticRenderFns__$8 = [];
+/* style */
+
+const __vue_inject_styles__$8 = undefined;
+/* scoped */
+
+const __vue_scope_id__$8 = undefined;
+/* module identifier */
+
+const __vue_module_identifier__$8 = "data-v-5022aee7";
+/* functional template */
+
+const __vue_is_functional_template__$8 = false;
+/* style inject */
+
+/* style inject SSR */
+
+/* style inject shadow dom */
+
+const __vue_component__$g = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$8,
+  staticRenderFns: __vue_staticRenderFns__$8
+}, __vue_inject_styles__$8, {}, __vue_scope_id__$8, __vue_is_functional_template__$8, __vue_module_identifier__$8, false, undefined, undefined, undefined);
+
+var __vue_component__$h = __vue_component__$g;/* script */
+
+/* template */
+var __vue_render__$7 = function () {
+  var _vm = this;
+
+  var _h = _vm.$createElement;
+
+  var _c = _vm._self._c || _h;
+
+  return _c('li', {
+    staticClass: "sidenav-item pt-2 m-3"
+  }, [_vm._t("default")], 2);
+};
+
 var __vue_staticRenderFns__$7 = [];
 /* style */
 
@@ -328,7 +368,7 @@ const __vue_inject_styles__$7 = undefined;
 const __vue_scope_id__$7 = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$7 = "data-v-5022aee7";
+const __vue_module_identifier__$7 = "data-v-8ccf1d68";
 /* functional template */
 
 const __vue_is_functional_template__$7 = false;
@@ -343,9 +383,40 @@ const __vue_component__$e = /*#__PURE__*/normalizeComponent({
   staticRenderFns: __vue_staticRenderFns__$7
 }, __vue_inject_styles__$7, {}, __vue_scope_id__$7, __vue_is_functional_template__$7, __vue_module_identifier__$7, false, undefined, undefined, undefined);
 
-var __vue_component__$f = __vue_component__$e;/* script */
+var __vue_component__$f = __vue_component__$e;//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var script$4 = {
+  props: {
+    'title': {
+      type: String,
+      default: ''
+    },
+    'icon': {
+      type: String,
+      default: null
+    }
+  },
 
+  data() {
+    return {
+      open: false
+    };
+  }
+
+};/* script */
+const __vue_script__$4 = script$4;
 /* template */
+
 var __vue_render__$6 = function () {
   var _vm = this;
 
@@ -354,8 +425,10 @@ var __vue_render__$6 = function () {
   var _c = _vm._self._c || _h;
 
   return _c('li', {
-    staticClass: "sidenav-item pt-2 m-3"
-  }, [_vm._t("default")], 2);
+    class: ['sidenav-item', {
+      open: 'open'
+    }]
+  }, [_vm._ssrNode("<a href=\"javascript:void(0)\" class=\"sidenav-link sidenav-toggle\">" + (_vm.icon ? "<i" + _vm._ssrClass(null, ['sidenav-icon', 'ion', _vm.icon]) + "></i>" : "<!---->") + " <div>" + _vm._ssrEscape(_vm._s(_vm.title)) + "</div></a> "), _vm._ssrNode("<ul class=\"sidenav-menu\">", "</ul>", [_vm._t("default")], 2)], 2);
 };
 
 var __vue_staticRenderFns__$6 = [];
@@ -367,7 +440,7 @@ const __vue_inject_styles__$6 = undefined;
 const __vue_scope_id__$6 = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$6 = "data-v-33c4f8b1";
+const __vue_module_identifier__$6 = "data-v-538ebd22";
 /* functional template */
 
 const __vue_is_functional_template__$6 = false;
@@ -380,7 +453,7 @@ const __vue_is_functional_template__$6 = false;
 const __vue_component__$c = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$6,
   staticRenderFns: __vue_staticRenderFns__$6
-}, __vue_inject_styles__$6, {}, __vue_scope_id__$6, __vue_is_functional_template__$6, __vue_module_identifier__$6, false, undefined, undefined, undefined);
+}, __vue_inject_styles__$6, __vue_script__$4, __vue_scope_id__$6, __vue_is_functional_template__$6, __vue_module_identifier__$6, false, undefined, undefined, undefined);
 
 var __vue_component__$d = __vue_component__$c;/* script */
 
@@ -555,20 +628,26 @@ var __vue_component__$7 = __vue_component__$6;//
 //
 //
 //
+//
 var script$2 = {
   props: {
+    // An Object which contains the table options
     value: {
       type: Object,
       default: {
+        // Loading State
         isLoading: false,
+        // Sort State
         sort: {
           field: 'id',
           direction: 'asc'
         },
+        // Pagination State
         pagination: {
           page: 1,
           limit: 25
         },
+        // Table Options
         options: {
           fields: [{
             key: 'id',
@@ -584,6 +663,7 @@ var script$2 = {
         }
       }
     },
+    // An Array of Objects which contains the table data
     results: {
       type: Object,
       default: {
@@ -591,6 +671,7 @@ var script$2 = {
         count: 0
       }
     },
+    // An array of numbers which will be used to populate the limit dropdown
     perPageOptions: {
       type: Array,
       default: () => [10, 25, 50, 100]
@@ -734,7 +815,7 @@ const __vue_inject_styles__$2 = undefined;
 const __vue_scope_id__$2 = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$2 = "data-v-1bcd59f6";
+const __vue_module_identifier__$2 = "data-v-72b99264";
 /* functional template */
 
 const __vue_is_functional_template__$2 = false;
@@ -822,6 +903,7 @@ var __vue_component__$3 = __vue_component__$2;//
 //
 //
 //
+// A component to search an entity. Performs an infinite scroll from the API, and allows you to filter options.
 var script = {
   props: ['format', 'options', 'value', 'name', 'endpoint', 'multiple', 'id'],
 
@@ -972,7 +1054,7 @@ const __vue_inject_styles__ = undefined;
 const __vue_scope_id__ = undefined;
 /* module identifier */
 
-const __vue_module_identifier__ = "data-v-cbce3efe";
+const __vue_module_identifier__ = "data-v-255a90dc";
 /* functional template */
 
 const __vue_is_functional_template__ = false;
@@ -988,7 +1070,7 @@ const __vue_component__ = /*#__PURE__*/normalizeComponent({
 }, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, undefined, undefined, undefined);
 
 var __vue_component__$1 = __vue_component__;// Layouts
-var components$1=/*#__PURE__*/Object.freeze({__proto__:null,GuiAdminLayout:__vue_component__$h,GuiSidebar:__vue_component__$f,GuiSidebarItem:__vue_component__$d,GuiSidebarDivider:__vue_component__$b,GuiSidebarSectionTitle:__vue_component__$9,GuiPageTitle:__vue_component__$7,GuiDatatable:__vue_component__$5,GuiActionColumn:__vue_component__$3,GuiSelectSearch:__vue_component__$1});// Import vue components
+var components$1=/*#__PURE__*/Object.freeze({__proto__:null,GuiAdminLayout:__vue_component__$j,GuiSidebar:__vue_component__$h,GuiSidebarItem:__vue_component__$f,GuiSidebarItemDropdown:__vue_component__$d,GuiSidebarDivider:__vue_component__$b,GuiSidebarSectionTitle:__vue_component__$9,GuiPageTitle:__vue_component__$7,GuiDatatable:__vue_component__$5,GuiActionColumn:__vue_component__$3,GuiSelectSearch:__vue_component__$1});// Import vue components
 
 const install = function installGunshotUi(Vue) {
   Object.entries(components$1).forEach(_ref => {
@@ -996,7 +1078,7 @@ const install = function installGunshotUi(Vue) {
     Vue.component(componentName, component);
   });
 }; // Create module definition for Vue.use()
-var components=/*#__PURE__*/Object.freeze({__proto__:null,'default':install,GuiAdminLayout:__vue_component__$h,GuiSidebar:__vue_component__$f,GuiSidebarItem:__vue_component__$d,GuiSidebarDivider:__vue_component__$b,GuiSidebarSectionTitle:__vue_component__$9,GuiPageTitle:__vue_component__$7,GuiDatatable:__vue_component__$5,GuiActionColumn:__vue_component__$3,GuiSelectSearch:__vue_component__$1});// only expose one global var, with component exports exposed as properties of
+var components=/*#__PURE__*/Object.freeze({__proto__:null,'default':install,GuiAdminLayout:__vue_component__$j,GuiSidebar:__vue_component__$h,GuiSidebarItem:__vue_component__$f,GuiSidebarItemDropdown:__vue_component__$d,GuiSidebarDivider:__vue_component__$b,GuiSidebarSectionTitle:__vue_component__$9,GuiPageTitle:__vue_component__$7,GuiDatatable:__vue_component__$5,GuiActionColumn:__vue_component__$3,GuiSelectSearch:__vue_component__$1});// only expose one global var, with component exports exposed as properties of
 // that global var (eg. plugin.component)
 
 Object.entries(components).forEach(_ref => {
