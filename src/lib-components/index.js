@@ -15,3 +15,4 @@ export { default as GuiActionColumn } from './components/admin/table/column/GUI-
 
 // Form components
 export { default as GuiSelectSearch } from './components/admin/forms/GUI-SelectSearch.vue';
+export { default as GuiCodeInput } from './components/admin/forms/GUI-CodeInput.vue';

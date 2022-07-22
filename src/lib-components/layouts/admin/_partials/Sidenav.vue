@@ -16,7 +16,7 @@ export default {
     props: {
         logo: {
             type: String,
-            default: '/assets/shoot-logo-primary-green.svg'
+            default: ''
         },
         routes: {
             type: Array,
