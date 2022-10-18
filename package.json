@@ -1,6 +1,6 @@
 {
   "name": "gunshot-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "We are using [Vuese](https://vuese.github.io/website/cli/#quick-preview-of-a-component) for generating documentation. You will need to globablly install it",
   "main": "dist/gunshot-ui.ssr.js",
   "browser": "dist/gunshot-ui.esm.js",
