@@ -1,7 +1,7 @@
 {
   "name": "gunshot-ui",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "We are using [Vuese](https://vuese.github.io/website/cli/#quick-preview-of-a-component) for generating documentation. You will need to globablly install it",
   "main": "dist/gunshot-ui.ssr.js",
   "browser": "dist/gunshot-ui.esm.js",
   "module": "dist/gunshot-ui.esm.js",
@@ -60,5 +60,15 @@
     "alias": {
       "@": "path.resolve('src')"
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BulletDigitalSolutions/Gunshot-UI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BulletDigitalSolutions/Gunshot-UI/issues"
+  },
+  "homepage": "https://github.com/BulletDigitalSolutions/Gunshot-UI#readme"
 }
