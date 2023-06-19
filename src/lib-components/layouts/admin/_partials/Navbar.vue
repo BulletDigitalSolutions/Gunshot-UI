@@ -23,13 +23,14 @@
 
             <div class="navbar-nav align-items-lg-center ml-auto">
                 <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
                     <span class="d-inline-flex flex-lg-row-reverse align-items-center align-middle">
-                        <img src="" alt class="d-block ui-w-30 rounded-circle">
-                        <span class="px-1 mr-lg-2 ml-2 ml-lg-0"></span>
+                        <img v-if="userAvatar" :src="userAvatar" alt class="d-block ui-w-30 rounded-circle">
+                        <span class="px-1 mr-lg-2 ml-2 ml-lg-0">{{ userName }}</span>
                     </span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
+                        <slot name="user-dropdown" />
                     </div>
                 </div>
             </div>
@@ -44,6 +45,21 @@ export default {
             type: Array,
             default: () => []
         },
+
+        'user': {
+            type: Object,
+            default: () => {}
+        },
     },
+
+    computed: {
+        userName () {
+            return this.user ? this.user.name : null;
+        },
+
+        userAvatar () {
+            return this.user ? this.user.avatar : null;
+        },
+    }
 }
 </script>

@@ -8,7 +8,11 @@
                 </sidenav>
 
                 <div class="layout-container">
-                    <navbar :breadcrumbs="breadcrumbs" />
+                    <navbar :breadcrumbs="breadcrumbs" :user="user">
+                        <template #user-dropdown>
+                            <slot name="user-dropdown" />
+                        </template>
+                    </navbar>
 
                     <div class="layout-content">
                         <div class="container-fluid d-flex align-items-stretch flex-grow-1 p-0">

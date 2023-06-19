@@ -37,12 +37,27 @@
 //
 //
 //
+//
 var script$8 = {
   props: {
     'breadcrumbs': {
       type: Array,
       default: () => []
+    },
+    'user': {
+      type: Object,
+      default: () => {}
     }
+  },
+  computed: {
+    userName() {
+      return this.user ? this.user.name : null;
+    },
+
+    userAvatar() {
+      return this.user ? this.user.avatar : null;
+    }
+
   }
 };function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
     if (typeof shadowMode !== 'boolean') {
@@ -133,11 +148,11 @@ var __vue_render__$c = function () {
     attrs: {
       "id": "layout-navbar"
     }
-  }, [_vm._ssrNode("<div class=\"layout-sidenav-toggle navbar-nav d-lg-none align-items-lg-center mr-auto\"><a href=\"javascript:void(0)\" class=\"nav-item nav-link px-0 mr-lg-4\"><i class=\"ion ion-md-menu text-large align-middle\"></i></a></div> <button type=\"button\" data-toggle=\"collapse\" data-target=\"#layout-navbar-collapse\" class=\"navbar-toggler\"><span class=\"navbar-toggler-icon\"></span></button> <div id=\"layout-navbar-collapse\" class=\"navbar-collapse collapse\"><hr class=\"d-lg-none w-100 my-2\"> <div class=\"navbar-nav mr-auto\"><ol class=\"breadcrumb m-auto\">" + _vm._ssrList(_vm.breadcrumbs, function (breadcrumb, key) {
+  }, [_vm._ssrNode("<div class=\"layout-sidenav-toggle navbar-nav d-lg-none align-items-lg-center mr-auto\"><a href=\"javascript:void(0)\" class=\"nav-item nav-link px-0 mr-lg-4\"><i class=\"ion ion-md-menu text-large align-middle\"></i></a></div> <button type=\"button\" data-toggle=\"collapse\" data-target=\"#layout-navbar-collapse\" class=\"navbar-toggler\"><span class=\"navbar-toggler-icon\"></span></button> "), _vm._ssrNode("<div id=\"layout-navbar-collapse\" class=\"navbar-collapse collapse\">", "</div>", [_vm._ssrNode("<hr class=\"d-lg-none w-100 my-2\"> <div class=\"navbar-nav mr-auto\"><ol class=\"breadcrumb m-auto\">" + _vm._ssrList(_vm.breadcrumbs, function (breadcrumb, key) {
     return "<li" + _vm._ssrClass(null, ['breadcrumb-item', {
       'active': key + 1 === _vm.breadcrumbs.length
     }]) + "><a" + _vm._ssrAttr("href", breadcrumb.url) + ">" + _vm._ssrEscape(_vm._s(breadcrumb.title)) + "</a></li>";
-  }) + "</ol></div> <div class=\"navbar-nav align-items-lg-center ml-auto\"><div class=\"nav-item dropdown\"><a href=\"#\" data-bs-toggle=\"dropdown\" class=\"nav-link dropdown-toggle\"><span class=\"d-inline-flex flex-lg-row-reverse align-items-center align-middle\"><img src alt class=\"d-block ui-w-30 rounded-circle\"> <span class=\"px-1 mr-lg-2 ml-2 ml-lg-0\"></span></span></a> <div class=\"dropdown-menu dropdown-menu-right\"></div></div></div></div>")]);
+  }) + "</ol></div> "), _vm._ssrNode("<div class=\"navbar-nav align-items-lg-center ml-auto\">", "</div>", [_vm._ssrNode("<div class=\"nav-item dropdown\">", "</div>", [_vm._ssrNode("<a href=\"#\" data-toggle=\"dropdown\" class=\"nav-link dropdown-toggle\"><span class=\"d-inline-flex flex-lg-row-reverse align-items-center align-middle\">" + (_vm.userAvatar ? "<img" + _vm._ssrAttr("src", _vm.userAvatar) + " alt class=\"d-block ui-w-30 rounded-circle\">" : "<!---->") + " <span class=\"px-1 mr-lg-2 ml-2 ml-lg-0\">" + _vm._ssrEscape(_vm._s(_vm.userName)) + "</span></span></a> "), _vm._ssrNode("<div class=\"dropdown-menu dropdown-menu-right\">", "</div>", [_vm._t("user-dropdown")], 2)], 2)])], 2)], 2);
 };
 
 var __vue_staticRenderFns__$c = [];
@@ -149,7 +164,7 @@ const __vue_inject_styles__$c = undefined;
 const __vue_scope_id__$c = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$c = "data-v-56410c2e";
+const __vue_module_identifier__$c = "data-v-79ba4842";
 /* functional template */
 
 const __vue_is_functional_template__$c = false;
@@ -273,8 +288,16 @@ var __vue_render__$a = function () {
     }
   }, [_vm._t("sidenav")], 2), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"layout-container\">", "</div>", [_c('navbar', {
     attrs: {
-      "breadcrumbs": _vm.breadcrumbs
-    }
+      "breadcrumbs": _vm.breadcrumbs,
+      "user": _vm.user
+    },
+    scopedSlots: _vm._u([{
+      key: "user-dropdown",
+      fn: function () {
+        return [_vm._t("user-dropdown")];
+      },
+      proxy: true
+    }], null, true)
   }), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"layout-content\">", "</div>", [_vm._ssrNode("<div class=\"container-fluid d-flex align-items-stretch flex-grow-1 p-0\">", "</div>", [_vm._t("sidebar"), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"flex-shrink-1 flex-grow-1 container-p-x container-p-y\">", "</div>", [_vm._t("default")], 2)], 2), _vm._ssrNode(" <nav class=\"layout-footer footer bg-footer-theme\"><div class=\"container-fluid d-flex flex-wrap justify-content-between text-center container-p-x pb-3\"><div class=\"pt-3\"><span class=\"footer-text font-weight-bolder\"></span> ©\n                            </div></div></nav>")], 2)], 2)], 2)])]);
 };
 
@@ -287,7 +310,7 @@ const __vue_inject_styles__$a = undefined;
 const __vue_scope_id__$a = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$a = "data-v-15a022da";
+const __vue_module_identifier__$a = "data-v-f638c77c";
 /* functional template */
 
 const __vue_is_functional_template__$a = false;
@@ -1097,6 +1120,7 @@ var __vue_component__$3 = __vue_component__$2;//
 //
 //
 //
+// Based off https://github.com/suweya/vue-verification-code-input/blob/master/src/components/CodeInput.vue - MIT License
 const KEY_CODE = {
   backspace: 8,
   left: 37,
@@ -1335,7 +1359,7 @@ const __vue_inject_styles__ = undefined;
 const __vue_scope_id__ = undefined;
 /* module identifier */
 
-const __vue_module_identifier__ = "data-v-45712949";
+const __vue_module_identifier__ = "data-v-b4b145a8";
 /* functional template */
 
 const __vue_is_functional_template__ = false;

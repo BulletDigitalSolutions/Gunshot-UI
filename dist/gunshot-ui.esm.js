@@ -37,12 +37,27 @@
 //
 //
 //
+//
 var script$8 = {
   props: {
     'breadcrumbs': {
       type: Array,
       default: () => []
+    },
+    'user': {
+      type: Object,
+      default: () => {}
     }
+  },
+  computed: {
+    userName() {
+      return this.user ? this.user.name : null;
+    },
+
+    userAvatar() {
+      return this.user ? this.user.avatar : null;
+    }
+
   }
 };
 
@@ -159,7 +174,29 @@ var __vue_render__$c = function () {
         "href": breadcrumb.url
       }
     }, [_vm._v(_vm._s(breadcrumb.title))])]);
-  }), 0)]), _vm._v(" "), _vm._m(2)])]);
+  }), 0)]), _vm._v(" "), _c('div', {
+    staticClass: "navbar-nav align-items-lg-center ml-auto"
+  }, [_c('div', {
+    staticClass: "nav-item dropdown"
+  }, [_c('a', {
+    staticClass: "nav-link dropdown-toggle",
+    attrs: {
+      "href": "#",
+      "data-toggle": "dropdown"
+    }
+  }, [_c('span', {
+    staticClass: "d-inline-flex flex-lg-row-reverse align-items-center align-middle"
+  }, [_vm.userAvatar ? _c('img', {
+    staticClass: "d-block ui-w-30 rounded-circle",
+    attrs: {
+      "src": _vm.userAvatar,
+      "alt": ""
+    }
+  }) : _vm._e(), _vm._v(" "), _c('span', {
+    staticClass: "px-1 mr-lg-2 ml-2 ml-lg-0"
+  }, [_vm._v(_vm._s(_vm.userName))])])]), _vm._v(" "), _c('div', {
+    staticClass: "dropdown-menu dropdown-menu-right"
+  }, [_vm._t("user-dropdown")], 2)])])])]);
 };
 
 var __vue_staticRenderFns__$c = [function () {
@@ -196,36 +233,6 @@ var __vue_staticRenderFns__$c = [function () {
   }, [_c('span', {
     staticClass: "navbar-toggler-icon"
   })]);
-}, function () {
-  var _vm = this;
-
-  var _h = _vm.$createElement;
-
-  var _c = _vm._self._c || _h;
-
-  return _c('div', {
-    staticClass: "navbar-nav align-items-lg-center ml-auto"
-  }, [_c('div', {
-    staticClass: "nav-item dropdown"
-  }, [_c('a', {
-    staticClass: "nav-link dropdown-toggle",
-    attrs: {
-      "href": "#",
-      "data-bs-toggle": "dropdown"
-    }
-  }, [_c('span', {
-    staticClass: "d-inline-flex flex-lg-row-reverse align-items-center align-middle"
-  }, [_c('img', {
-    staticClass: "d-block ui-w-30 rounded-circle",
-    attrs: {
-      "src": "",
-      "alt": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "px-1 mr-lg-2 ml-2 ml-lg-0"
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "dropdown-menu dropdown-menu-right"
-  })])]);
 }];
 /* style */
 
@@ -388,8 +395,16 @@ var __vue_render__$a = function () {
     staticClass: "layout-container"
   }, [_c('navbar', {
     attrs: {
-      "breadcrumbs": _vm.breadcrumbs
-    }
+      "breadcrumbs": _vm.breadcrumbs,
+      "user": _vm.user
+    },
+    scopedSlots: _vm._u([{
+      key: "user-dropdown",
+      fn: function () {
+        return [_vm._t("user-dropdown")];
+      },
+      proxy: true
+    }], null, true)
   }), _vm._v(" "), _c('div', {
     staticClass: "layout-content"
   }, [_c('div', {
@@ -1290,6 +1305,7 @@ var __vue_component__$3 = __vue_component__$2;
 //
 //
 //
+// Based off https://github.com/suweya/vue-verification-code-input/blob/master/src/components/CodeInput.vue - MIT License
 const KEY_CODE = {
   backspace: 8,
   left: 37,
